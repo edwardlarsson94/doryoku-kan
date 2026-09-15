@@ -1,0 +1,22 @@
+# ==========================================
+# Archivos que Git NO subirá a GitHub
+# ==========================================
+
+# 📄 Documentos internos de SDD (se quedan en tu PC)
+docs/
+
+# 💻 Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 📝 Archivos del editor
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+
+# 🧪 Archivos temporales
+*.log
+*.tmp
+*.temp
