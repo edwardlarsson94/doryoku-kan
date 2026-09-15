@@ -84,26 +84,19 @@ a:hover {
 .logo:hover {
   color: var(--blanco);
 }
-.logo__emblema {
-  display: grid;
-  place-items: center;
+.logo__imagen {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  border: 2px solid var(--oro);
-  box-shadow: 0 0 0 3px var(--rojo), inset 0 0 0 1px var(--rojo);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--blanco);
-  background: var(--negro);
+  object-fit: contain;
 }
-.logo__emblema--grande {
+.logo__imagen--grande {
   width: 6.5rem;
   height: 6.5rem;
-  font-size: 1.6rem;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
   margin-inline: auto;
-  box-shadow: 0 0 0 6px var(--rojo), inset 0 0 0 2px var(--rojo);
 }
 .logo__texto {
   display: flex;
