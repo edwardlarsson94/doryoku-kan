@@ -2,7 +2,22 @@
 # Archivos que Git NO subirá a GitHub
 # ==========================================
 
-# 📄 Documentos internos de SDD (se quedan en tu PC)
+# 📦 Dependencias y compilación
+/node_modules
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# 📦 Registro de paquetes
+npm-debug.log
+yarn-error.log
+
+# ⚡ Caché de Angular
+/.angular/cache
+.sass-cache/
+
+# 📁 Documentos internos de SDD (se quedan en tu PC)
 docs/
 
 # 💻 Archivos de sistema operativo
@@ -10,13 +25,32 @@ docs/
 Thumbs.db
 desktop.ini
 
-# 📝 Archivos del editor
-.vscode/
-.idea/
-*.swp
-*.sublime-workspace
+# 📝 Archivos del editor — VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+.history/*
 
-# 🧪 Archivos temporales
+# 📝 Otros editores
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.swp
+
+# 🧪 Archivos temporales y pruebas
 *.log
 *.tmp
 *.temp
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/

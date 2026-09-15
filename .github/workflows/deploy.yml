@@ -7,9 +7,21 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: ✅ Descargar archivos del repositorio
         uses: actions/checkout@v4
+
+      - name: 🟢 Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Instalar dependencias
+        run: npm ci
+
+      - name: 🔨 Compilar Angular para producción
+        run: npx ng build --configuration=production
 
       - name: 🔑 Configurar credenciales de AWS
         uses: aws-actions/configure-aws-credentials@v4
@@ -18,6 +30,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: 🚀 Subir archivos al Bucket S3
-        run: |
-          aws s3 sync . s3://doryoku-kan --delete --exclude "docs/*" --exclude ".git/*" --exclude ".github/*"
+      - name: 🚀 Subir archivos compilados al Bucket S3
+        run: aws s3 sync ./dist/doryoku-kan/browser s3://doryoku-kan --delete
