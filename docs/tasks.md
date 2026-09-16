@@ -28,6 +28,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [x] Un solo `h1` en toda la página. Datos confirmados publicados; sin información inventada.
 - [x] **Teléfono convertido en enlace:** `tel:+573052403346` funcional en contacto y pie.
 - [x] Sección Nosotros actualizada: enlaces oficiales a SKIF Internacional (skifworld.com) y WKF (wkf.net) debajo de las tarjetas.
+- [x] Botón flotante de WhatsApp: siempre visible en esquina inferior derecha, abre conversación directa.
 - [x] **Hecho cuando:** cada enlace del menú lleva a su sección; todos los datos coinciden con la realidad.
 ---
 ## 4. Estilos
@@ -41,6 +42,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
   - [x] `.galeria__item` — imágenes con efecto de elevación, borde dorado y zoom suave.
   - [x] `.enlace-telefono` — números cliqueables con estilo diferenciado.
 - [x] Estilos de enlaces de afiliación: centrado, línea divisoria superior, color dorado al pasar cursor.
+- [x] Estilos de botón flotante: posición fija, color oficial de WhatsApp, efecto de agrandamiento al pasar cursor.
 - [x] **Hecho cuando:** todos los ajustes visuales funcionan; contraste suficiente en todos los fondos.
 ---
 ## 5. Verificación
@@ -51,6 +53,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [ ] Confirmar que no hay JavaScript obligatorio; todo funciona con HTML y CSS.
 - [x] Confirmar que enlaces SKIF y WKF abren en pestaña nueva y muestran efecto al pasar el cursor.
 - [x] Confirmar que el título aparece correcto en la pestaña del navegador.
+- [x] Confirmar que el botón de WhatsApp permanece visible al desplazarse y abre en pestaña nueva.
 - [x] **Hecho cuando:** se cumplen todos los criterios de éxito definidos en la propuesta.
 ---
 ## Datos ya incorporados (antes pendientes ✅)
@@ -61,6 +64,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 | Horarios por categoría | ✅ Estructura lista; contenido según cronograma |
 | Fotos del dojo | ✅ Galería implementada en `public/images/galeria/` |
 | Logo del dojo | ✅ Imagen en `public/images/logo-dojo.png` |
+| WhatsApp flotante | Siempre visible, abre conversación directa |
 ---
 ## Paso adicional: Migración a Angular
 - [ ] Crear proyecto Angular nuevo con estructura recomendada.

@@ -145,3 +145,10 @@ El Dojo Doryokukan se identifica públicamente como parte de:
 - Título de página: `Dojo Doryokukan — Karate SKIF Colombia | Villa del Rosario`
 - Meta descripción: `Entrenamiento de karate Shotokan para niños, jóvenes y adultos. Dirigido por el Sensei Ernesto Márquez. Coliseo de Megacolegio, Villa del Rosario. Inscripciones abiertas.`
 - Propósito: Aparece en resultados de búsqueda y al compartir en redes sociales.
+
+## Botón flotante de WhatsApp
+- Posición: **esquina inferior derecha** de la pantalla
+- Siempre visible: se mantiene fijo aunque se desplace la página
+- Enlace: `https://wa.me/573052403346` → abre conversación directa
+- Apariencia: círculo verde oficial con ícono de WhatsApp
+- Comportamiento: abre en pestaña nueva; al pasar el cursor se agranda ligeramente

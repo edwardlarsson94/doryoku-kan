@@ -570,6 +570,29 @@ a:hover {
 .afiliacion a:hover {
   border-bottom-color: var(--oro);
 }
+.boton-whatsapp-flotante {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.boton-whatsapp-flotante:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+}
+.boton-whatsapp-flotante svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
 
 @media (min-width: 48rem) {
   .nav-panel {
