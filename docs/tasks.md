@@ -1,26 +1,20 @@
 # Tareas: página de inicio — Dojo Doryokukan
-
 Orden de ejecución. Cada ítem es comprobable.
 Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
-
 ---
-
 ## 1. Documentación
 - [x] Reescribir `proposal.md` con identidad real del dojo (sensei, SKIF, público, valores, alcance).
 - [x] Reescribir `design.md` con paleta, archivos, mapa de secciones/anclas y decisiones de diseño.
 - [x] **Actualizar `design.md` con ajustes recientes:** logo con imagen, teléfonos cliqueables, horarios resaltados, galería con fotos.
 - [x] Reescribir esta lista alineada al diseño nuevo.
 - [x] **Hecho cuando:** los tres archivos coinciden entre sí y con los datos reales del dojo.
-
 ---
-
 ## 2. Base
 - [x] Crear estructura base con título y metadatos correctos.
+- [x] Título y meta descripción optimizados: ubicación y palabras clave agregadas.
 - [x] Enlazar hoja de estilos y verificar carga.
 - [x] **Hecho cuando:** la página abre y muestra el título correcto en la pestaña.
-
 ---
-
 ## 3. Marcado y contenido
 - [x] Header con logo + navegación: Inicio, Nosotros, Clases, Cronograma, Galería, Contacto (menú desplegable en móvil).
 - [x] Hero: nombre, eslogan, SKIF Colombia, inscripciones abiertas, botón **Inscríbete**.
@@ -33,11 +27,9 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [x] **Footer actualizado:** dirección, teléfono cliqueable, enlaces del menú, derechos.
 - [x] Un solo `h1` en toda la página. Datos confirmados publicados; sin información inventada.
 - [x] **Teléfono convertido en enlace:** `tel:+573052403346` funcional en contacto y pie.
-- [x] **Hecho cuando:** cada enlace del menú lleva a su sección; todos los datos coinciden con la realidad.
 - [x] Sección Nosotros actualizada: enlaces oficiales a SKIF Internacional (skifworld.com) y WKF (wkf.net) debajo de las tarjetas.
-
+- [x] **Hecho cuando:** cada enlace del menú lleva a su sección; todos los datos coinciden con la realidad.
 ---
-
 ## 4. Estilos
 - [x] Variables de paleta oficiales: rojo, negro, blanco, oro.
 - [x] Fondo oscuro, secciones alternadas, bordes decorativos, tarjetas y botones.
@@ -48,11 +40,9 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
   - [x] `.horario__hora` — resaltado de horarios en rojo y negrita.
   - [x] `.galeria__item` — imágenes con efecto de elevación, borde dorado y zoom suave.
   - [x] `.enlace-telefono` — números cliqueables con estilo diferenciado.
-- [x] **Hecho cuando:** todos los ajustes visuales funcionan; contraste suficiente en todos los fondos.
 - [x] Estilos de enlaces de afiliación: centrado, línea divisoria superior, color dorado al pasar cursor.
-
+- [x] **Hecho cuando:** todos los ajustes visuales funcionan; contraste suficiente en todos los fondos.
 ---
-
 ## 5. Verificación
 - [ ] Recorrer menú completo y comprobar navegación hasta Contacto e Inscríbete.
 - [ ] Probar diseño en: ~360px (móvil), tablet y escritorio.
@@ -60,10 +50,9 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [ ] Confirmar que las imágenes de galería cargan y muestran efectos.
 - [ ] Confirmar que no hay JavaScript obligatorio; todo funciona con HTML y CSS.
 - [x] Confirmar que enlaces SKIF y WKF abren en pestaña nueva y muestran efecto al pasar el cursor.
+- [x] Confirmar que el título aparece correcto en la pestaña del navegador.
 - [x] **Hecho cuando:** se cumplen todos los criterios de éxito definidos en la propuesta.
-
 ---
-
 ## Datos ya incorporados (antes pendientes ✅)
 | Elemento | Estado |
 | -------- | ------ |
@@ -72,9 +61,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 | Horarios por categoría | ✅ Estructura lista; contenido según cronograma |
 | Fotos del dojo | ✅ Galería implementada en `public/images/galeria/` |
 | Logo del dojo | ✅ Imagen en `public/images/logo-dojo.png` |
-
 ---
-
 ## Paso adicional: Migración a Angular
 - [ ] Crear proyecto Angular nuevo con estructura recomendada.
 - [ ] Copiar marcado HTML → `src/app/app.component.html`.

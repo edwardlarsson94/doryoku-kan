@@ -140,3 +140,8 @@ El Dojo Doryokukan se identifica públicamente como parte de:
 - Se ubican en la sección **Nosotros**, debajo de las dos tarjetas.
 - Se abren en pestaña nueva: `target="_blank" rel="noopener noreferrer"`
 - Texto: *"Afiliado a SKIF Internacional · Miembro de la Federación Mundial de Karate (WKF)"*
+
+## Título y Meta Descripción
+- Título de página: `Dojo Doryokukan — Karate SKIF Colombia | Villa del Rosario`
+- Meta descripción: `Entrenamiento de karate Shotokan para niños, jóvenes y adultos. Dirigido por el Sensei Ernesto Márquez. Coliseo de Megacolegio, Villa del Rosario. Inscripciones abiertas.`
+- Propósito: Aparece en resultados de búsqueda y al compartir en redes sociales.
