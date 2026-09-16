@@ -551,6 +551,25 @@ a:hover {
   background-color: rgba(37, 211, 102, 0.1);
   color: #25D366;
 }
+.afiliacion {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+}
+.afiliacion__texto {
+  font-size: 0.95rem;
+}
+.afiliacion a {
+  color: var(--oro);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.afiliacion a:hover {
+  border-bottom-color: var(--oro);
+}
 
 @media (min-width: 48rem) {
   .nav-panel {

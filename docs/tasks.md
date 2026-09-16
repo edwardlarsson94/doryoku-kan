@@ -34,6 +34,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [x] Un solo `h1` en toda la página. Datos confirmados publicados; sin información inventada.
 - [x] **Teléfono convertido en enlace:** `tel:+573052403346` funcional en contacto y pie.
 - [x] **Hecho cuando:** cada enlace del menú lleva a su sección; todos los datos coinciden con la realidad.
+- [x] Sección Nosotros actualizada: enlaces oficiales a SKIF Internacional (skifworld.com) y WKF (wkf.net) debajo de las tarjetas.
 
 ---
 
@@ -48,6 +49,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
   - [x] `.galeria__item` — imágenes con efecto de elevación, borde dorado y zoom suave.
   - [x] `.enlace-telefono` — números cliqueables con estilo diferenciado.
 - [x] **Hecho cuando:** todos los ajustes visuales funcionan; contraste suficiente en todos los fondos.
+- [x] Estilos de enlaces de afiliación: centrado, línea divisoria superior, color dorado al pasar cursor.
 
 ---
 
@@ -57,6 +59,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [ ] Verificar que teléfonos al hacer clic abren acción de llamada.
 - [ ] Confirmar que las imágenes de galería cargan y muestran efectos.
 - [ ] Confirmar que no hay JavaScript obligatorio; todo funciona con HTML y CSS.
+- [x] Confirmar que enlaces SKIF y WKF abren en pestaña nueva y muestran efecto al pasar el cursor.
 - [x] **Hecho cuando:** se cumplen todos los criterios de éxito definidos en la propuesta.
 
 ---

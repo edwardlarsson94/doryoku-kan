@@ -128,3 +128,15 @@
 - Todos los enlaces se abren en pestaña nueva (`target="_blank" rel="noopener noreferrer"`)
 - WhatsApp usa formato `wa.me` para abrir chat directamente
 - Se ubican en el **pie de página** y opcionalmente en sección Contacto
+
+## Enlaces de afiliación institucional
+El Dojo Doryokukan se identifica públicamente como parte de:
+
+| Institución | Enlace oficial | Propósito |
+|---|---|---|
+| SKIF Internacional | https://www.skifworld.com/ | Organización mundial del estilo Shotokan |
+| WKF — Federación Mundial | https://www.wkf.net/ | Reconocimiento oficial del karate |
+
+- Se ubican en la sección **Nosotros**, debajo de las dos tarjetas.
+- Se abren en pestaña nueva: `target="_blank" rel="noopener noreferrer"`
+- Texto: *"Afiliado a SKIF Internacional · Miembro de la Federación Mundial de Karate (WKF)"*
