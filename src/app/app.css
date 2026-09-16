@@ -508,6 +508,50 @@ a:hover {
   font-size: 0.85rem;
   color: #9a9a9a;
 }
+.sitio-pie__redes {
+  margin-top: 0.5rem;
+}
+.redes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+.icono-svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+/* Colores oficiales al pasar el cursor — reglas de cada marca respetadas */
+.redes a[href*="instagram.com"]:hover {
+  background-color: rgba(228, 64, 95, 0.1);
+  color: #E4405F;
+}
+.redes a[href*="facebook.com"]:hover {
+  background-color: rgba(24, 119, 242, 0.1);
+  color: #1877F2;
+}
+.redes a[href*="youtube.com"]:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #FF0000;
+}
+.redes a[href*="wa.me"]:hover {
+  background-color: rgba(37, 211, 102, 0.1);
+  color: #25D366;
+}
+
 @media (min-width: 48rem) {
   .nav-panel {
     display: none;

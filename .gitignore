@@ -17,9 +17,6 @@ yarn-error.log
 /.angular/cache
 .sass-cache/
 
-# 📁 Documentos internos de SDD (se quedan en tu PC)
-docs/
-
 # 💻 Archivos de sistema operativo
 .DS_Store
 Thumbs.db

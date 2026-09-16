@@ -1,5 +1,4 @@
 name: Desplegar a AWS S3
-
 on:
   push:
     branches: [ "main" ]
@@ -7,7 +6,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: ✅ Descargar archivos del repositorio
         uses: actions/checkout@v4
@@ -19,6 +17,9 @@ jobs:
 
       - name: 📦 Instalar dependencias
         run: npm ci
+
+      - name: 🧪 Ejecutar pruebas
+        run: ng test --browsers=ChromeHeadless --watch=false
 
       - name: 🔨 Compilar Angular para producción
         run: npx ng build --configuration=production
