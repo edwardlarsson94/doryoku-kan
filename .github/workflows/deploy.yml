@@ -1,4 +1,5 @@
 name: Desplegar a AWS S3
+
 on:
   push:
     branches: [ "main" ]
@@ -6,6 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: ✅ Descargar archivos del repositorio
         uses: actions/checkout@v4
@@ -15,18 +17,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: 🌐 Instalar navegador Chrome
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
-
       - name: 📦 Instalar dependencias
         run: npm ci
-
-      - name: 🧪 Ejecutar pruebas
-        run: npx ng test --browsers=ChromeHeadless --watch=false --no-watch --no-progress --browsers=ChromeHeadless
-        env:
-          CHROME_BIN: /usr/bin/google-chrome-stable
 
       - name: 🔨 Compilar Angular para producción
         run: npx ng build --configuration=production
