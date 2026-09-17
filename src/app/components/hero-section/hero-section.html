@@ -1,8 +1,24 @@
 <section id="inicio" class="hero">
+  <video
+    #videoFondo
+    class="hero__video-fondo"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    aria-hidden="true"
+  >
+    <source src="/videos/portada-fondo.mp4" type="video/mp4" />
+    Tu navegador no soporta video.
+  </video>
+
+  <div class="hero__capa"></div>
+
   <div class="hero__marco">
     <p class="eyebrow">Karate SKIF Colombia</p>
     <div class="logo logo--hero" aria-hidden="true">
-      <img src="images/logo-doryokukan.jpg" alt="Dojo Doryokukan" class="logo__imagen--grande" />
+      <img src="/images/logo-doryokukan.jpg" alt="Dojo Doryokukan" class="logo__imagen--grande" />
     </div>
     <h1>Dojo Doryokukan</h1>
     <p class="hero__eslogan">El camino del esfuerzo</p>

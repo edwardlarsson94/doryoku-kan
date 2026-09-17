@@ -1,19 +1,36 @@
 .hero {
+  position: relative;
   min-height: calc(100vh - var(--header));
   display: grid;
   place-items: center;
   padding: 3rem 1rem 4rem;
-  background:
-    linear-gradient(135deg, transparent 0 42%, rgba(211, 47, 47, 0.12) 42% 43%, transparent 43%),
-    radial-gradient(ellipse at top, rgba(211, 47, 47, 0.22), transparent 55%),
-    var(--negro-profundo);
   text-align: center;
+  overflow: hidden;
+}
+
+.hero__video-fondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero__capa {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 2;
 }
 
 .hero__marco {
+  position: relative;
+  z-index: 3;
   width: min(42rem, 100%);
   padding: 2.5rem 1.5rem;
-  position: relative;
 }
 
 .hero__marco::before,
@@ -39,15 +56,6 @@
   border-top: 0;
 }
 
-.eyebrow {
-  margin: 0 0 0.75rem;
-  color: var(--oro);
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-
 .hero h1 {
   color: var(--blanco);
   font-size: clamp(2rem, 7vw, 3.6rem);
@@ -55,6 +63,7 @@
   line-height: 1.15;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero__eslogan {
@@ -63,12 +72,14 @@
   font-size: clamp(1.1rem, 3vw, 1.45rem);
   font-style: italic;
   letter-spacing: 0.04em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero__lead {
   margin: 0 auto 1.25rem;
   max-width: 34rem;
   color: var(--hueso);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .badge {
@@ -85,29 +96,11 @@
   font-weight: 700;
 }
 
-.boton {
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  background: var(--rojo);
-  color: var(--blanco);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.78rem;
-  font-weight: 700;
-  border: 1px solid var(--oro);
-  border-radius: 8px;
-  transition: all 0.3s ease;
+.logo--hero {
+  margin-bottom: 1rem;
 }
 
-.boton:hover {
-  background: var(--rojo-oscuro);
-  color: var(--blanco);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.logo--hero .logo__imagen--grande {
+.logo__imagen--grande {
   width: 6.5rem;
   height: 6.5rem;
   border-radius: 50%;
