@@ -1,17 +1,33 @@
-/* Contenedor principal */
+/* Contenedor principal — dos fotos + contenido */
 .nosotros-contenido {
   display: grid;
   grid-template-columns: 22rem 1fr;
   gap: 2.5rem;
-  align-items: start;
+  align-items: center;
 }
 
-/* Imagen del sensei — SIN sombra extra */
-.nosotros-imagen img {
+/* Rejilla de fotos de los senseis */
+.nosotros-imagenes {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Imagen individual del sensei */
+.sensei-foto img {
   width: 100%;
   border: 4px solid var(--oro);
   border-radius: 0.25rem;
   box-shadow: none;
+  object-fit: cover;
+}
+
+.sensei-foto__nombre {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--negro);
 }
 
 /* Tarjetas — fondo crema */
@@ -47,7 +63,7 @@
   border-width: 2px 0 0 2px;
 }
 
-/* Etiquetas SENSEI / EL NOMBRE — ROJO */
+/* Etiquetas SENSEI / INSTRUCTORA / EL NOMBRE — ROJO */
 .tarjeta__kicker {
   color: var(--rojo);
   font-size: 0.75rem;
@@ -104,9 +120,12 @@
   text-decoration: underline;
 }
 
-/* Responsivo */
+/* Responsivo — se apila en móvil */
 @media (max-width: 47.99rem) {
   .nosotros-contenido {
     grid-template-columns: 1fr;
+  }
+  .nosotros-imagenes {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
 }
