@@ -1,0 +1,46 @@
+.horario {
+  background: #f6f3ee;
+  border: 1px solid #ddd4c6;
+  padding: 1.4rem 1.3rem;
+  position: relative;
+}
+
+.horario::before {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-top: 2px solid var(--oro);
+  border-right: 2px solid var(--oro);
+}
+
+.horario h3 {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+  color: var(--negro);
+}
+
+.horario__franja {
+  color: var(--rojo);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
+
+.horario__hora {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rojo);
+  margin: 0.25rem 0 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.horario p {
+  margin: 0;
+  color: #333;
+}

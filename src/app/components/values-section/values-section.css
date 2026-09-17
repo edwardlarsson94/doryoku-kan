@@ -1,0 +1,37 @@
+.seccion--roja {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.28)),
+    var(--rojo);
+}
+
+.valor {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 1.4rem 1.3rem;
+}
+
+.valor__marca {
+  margin: 0 0 0.4rem;
+  color: var(--oro);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+}
+
+.valor h3 {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+}
+
+.valor p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (min-width: 48rem) {
+  .rejilla--cuatro {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

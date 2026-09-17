@@ -1,0 +1,25 @@
+.inscripciones {
+  max-width: 40rem;
+}
+
+.inscripciones h3 {
+  margin: 1.5rem 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1.1rem;
+}
+
+.inscripciones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.inscripciones li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.cta-boton {
+  margin-top: 2rem;
+}

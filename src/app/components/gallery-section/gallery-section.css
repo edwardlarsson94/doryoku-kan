@@ -1,0 +1,15 @@
+.instagram-contenedor {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 2px solid var(--oro);
+}
+
+.seccion--oscura a {
+  color: var(--oro);
+  text-decoration: underline;
+}
+
+.seccion--oscura a:hover {
+  color: var(--oro-claro);
+}

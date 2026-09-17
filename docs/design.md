@@ -38,6 +38,7 @@
 - **Sección Inscripciones independiente**: separada de Contacto, con requisitos, edades, horarios y llamada a la acción directa por WhatsApp.
 - **Botón flotante de WhatsApp**: siempre visible en esquina inferior derecha, color verde oficial, ícono SVG, abre chat directo.
 - **Navegación actualizada**: menú vincula a `#inscripciones` en lugar de `#contacto`.
+- **Reestructuración en componentes Angular**: el marcado único se divide en módulos independientes escalables.
 
 ---
 
@@ -48,6 +49,7 @@
 - Bordes de artes marciales: filete dorado fino, esquinas en L, línea tipo cinturón bajo títulos de sección.
 - Logo: **imagen circular** en lugar de emblema tipográfico.
 - Tarjetas con imagen: foto arriba, texto abajo, borde dorado, elevación suave al pasar el cursor.
+- Botones: esquinas redondeadas `8px`, transición suave `0.3s ease`, elevación y sombra en `:hover`.
 
 ---
 ## 🔤 Tipografía
@@ -57,46 +59,62 @@
 - Un solo `h1` en la página (nombre del dojo).
 
 ---
-## 🧱 Arquitectura de la página
-1. Enlace de salto "Saltar al contenido".
-2. `header` fijo: logo + navegación (Inicio, Nosotros, Clases, Cronograma, Galería, Atletas, Inscripciones). En móvil, menú desplegable con `<details>/<summary>`.
-3. Contenido principal:
-   - `#inicio` — Presentación: logo, nombre, eslogan, SKIF Colombia, aviso "Inscripciones abiertas", botón **Inscríbete**.
-   - `#nosotros` — Foto del Sensei + texto sobre Ernesto Márquez y el significado de Doryokukan. Enlaces a SKIF Internacional y WKF.
-   - `#clases` — Tres tarjetas con foto: Niños, Jóvenes, Adultos.
-   - `#valores` — Cuatro valores oficiales: Disciplina, Respeto, Esfuerzo, Honor.
-   - `#cronograma` — Horarios por categoría con horas resaltadas.
-   - `#galeria` — Widget de Instagram embebido + enlace al perfil.
-   - `#atletas` — Tres tarjetas con foto: Equipo infantil, juvenil y adulto.
-   - `#inscripciones` — Requisitos, edades, horarios, prueba sin compromiso + botón directo a WhatsApp.
-4. `footer` — Marca, dirección, teléfono cliqueable, enlaces del menú, redes sociales, derechos reservados.
+## 🧱 Arquitectura de componentes (Angular 22)
+```
+src/app/
+├── app.component.ts / .html / .css       → Contenedor principal, variables globales, estilos compartidos
+└── components/
+    ├── header-nav/          → Enlace de salto + Logo + Menú escritorio/móvil
+    ├── hero-section/        → #inicio — Portada, título, eslogan, botón principal
+    ├── about-section/       → #nosotros — Sensei, significado, afiliaciones
+    ├── classes-section/     → #clases — Tarjetas Niños / Jóvenes / Adultos
+    ├── values-section/       → #valores — Cuatro valores oficiales
+    ├── schedule-section/     → #cronograma — Horarios por categoría
+    ├── gallery-section/      → #galeria — Widget de Instagram + enlace
+    ├── team-section/         → #atletas — Equipos infantil / juvenil / adulto
+    ├── enrollment-section/   → #inscripciones — Requisitos + CTA WhatsApp
+    ├── site-footer/          → Pie: dirección, teléfono, redes, enlaces, copyright
+```
+
+### Principios de división
+- Cada componente gestiona **una sola sección** con su propio `id` de ancla
+- `app.component.html` queda limpio: solo etiquetas `<app-nombre-seccion />`
+- `app.component.css` mantiene: `:root`, reseteos, `.envoltorio`, `.rejilla`, `.tarjeta`, `.boton` — estilos compartidos
+- Cada `components/*/*.css` contiene exclusivamente los estilos de su sección
+- Las anclas `#inicio`, `#nosotros`, etc. **se mantienen igual** → la navegación no se rompe
+- Rutas de imágenes `images/` sin cambios → resueltas desde `public/`
+
+---
+## 📄 Estructura de la página (por componente)
+1. **header-nav** → Enlace "Saltar al contenido" + `<header>` fijo con logo + menú escritorio + menú móvil (`<details>/<summary>`)
+2. **hero-section** → `#inicio` — Logo grande, nombre, eslogan, SKIF Colombia, aviso "Inscripciones abiertas", botón **Inscríbete**
+3. **about-section** → `#nosotros` — Foto del Sensei, biografía, significado de Doryokukan, enlaces SKIF Internacional + WKF
+4. **classes-section** → `#clases` — Tres tarjetas con foto: Niños, Jóvenes, Adultos
+5. **values-section** → `#valores` — Cuatro valores: Disciplina, Respeto, Esfuerzo, Honor
+6. **schedule-section** → `#cronograma` — Horarios con horas resaltadas
+7. **gallery-section** → `#galeria` — Iframe de Instagram + enlace al perfil
+8. **team-section** → `#atletas` — Tres tarjetas con foto: Equipo infantil, juvenil, adulto
+9. **enrollment-section** → `#inscripciones` — Requisitos, edades, horarios, prueba sin compromiso + botón WhatsApp
+10. **site-footer** → Marca, dirección, teléfono cliqueable, redes sociales con íconos SVG, enlaces del menú, copyright
+
 > Desplazamiento suave activado y `scroll-margin-top` en secciones para compensar el encabezado fijo.
 
 ---
-## 🅰️ HTML y CSS en Angular
-- El marcado HTML se coloca en `src/app/app.component.html`
-- Los estilos CSS se colocan en `src/app/app.component.css`
-- Las variables de color en `:root` se mantienen sin cambios
-- Diseño responsivo y puntos de quiebre intactos
-- Angular gestiona el desplazamiento y las anclas internas
-- Imágenes en `public/images/` → se referencian sin `public/` en la ruta
-
----
 ## 📋 Contenido (fuente de verdad)
-| Campo           | Valor                                      |
-| --------------- | ------------------------------------------ |
-| Dojo            | Dojo Doryokukan                            |
-| Sensei          | Ernesto Márquez                            |
-| Estilo          | Karate SKIF Colombia                       |
-| Eslogan         | El camino del esfuerzo                     |
-| Valores         | Disciplina · Respeto · Esfuerzo · Honor    |
-| Categorías      | Niños · Jóvenes · Adultos                  |
-| Ciudad          | Villa del Rosario, Colombia                |
-| Teléfono        | +57 305 240 3346 (cliqueable)              |
-| WhatsApp        | https://wa.me/573052403346                 |
-| Ubicación       | Coliseo de Megacolegio                     |
-| Inscripciones   | Abiertas — prueba dos clases sin compromiso |
-| Horarios        | Lunes, miércoles, viernes — Niños 5:30-7:00 p.m. / Jóvenes y adultos según grupo |
+| Campo            | Valor                                                |
+| ---------------- | ---------------------------------------------------- |
+| Dojo             | Dojo Doryokukan                                      |
+| Sensei           | Ernesto Márquez                                      |
+| Estilo           | Karate SKIF Colombia                                 |
+| Eslogan          | El camino del esfuerzo                               |
+| Valores          | Disciplina · Respeto · Esfuerzo · Honor              |
+| Categorías       | Niños · Jóvenes · Adultos                            |
+| Ciudad           | Villa del Rosario, Colombia                          |
+| Teléfono         | +57 305 240 3346 (cliqueable `tel:+573052403346`)    |
+| WhatsApp         | https://wa.me/573052403346                           |
+| Ubicación        | Coliseo de Megacolegio                               |
+| Inscripciones    | Abiertas — prueba dos clases sin compromiso          |
+| Horarios         | Lunes/Miércoles/Viernes — Niños 5:30-7:00 p.m. · Martes/Jueves/Viernes — Jóvenes y Adultos 5:30-7:00 p.m. |
 
 ---
 ## ♿ Accesibilidad y rendimiento
@@ -106,18 +124,20 @@
 - Imágenes con `loading="lazy"` y atributos `alt` descriptivos.
 - Angular compila a HTML/CSS optimizado → rendimiento igual o superior al original.
 - Sin dependencias externas obligatorias.
+- Cada componente es independiente: pruebas unitarias por sección.
 
 ---
 ## 🛠️ Construcción y publicación
-- Comando: `ng build` → genera carpeta `dist/` lista
+- Comando: `ng build --configuration=production` → genera carpeta `dist/` lista
 - Se publica automáticamente en **AWS S3 + CloudFront**
 - Cada actualización en rama principal → GitHub Actions compila y sube solo los archivos nuevos
 - Credenciales AWS almacenadas como secretos en GitHub (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`)
 - Bucket: `doryoku-kan` | Región: `us-east-1`
+- Se excluye `docs/` del despliegue público
 
 ---
 ## 📱 Redes sociales y contacto directo
-| Red         | Enlace / Dato |
+| Red        | Enlace / Dato |
 | ----------- | ------------- |
 | Instagram   | https://www.instagram.com/dojodoryokukan/ |
 | Facebook    | https://www.facebook.com/dojodoryokukancolombia/ |
@@ -125,15 +145,15 @@
 | WhatsApp    | https://wa.me/573052403346 — abre chat directo |
 
 - Todos los enlaces se abren en pestaña nueva (`target="_blank" rel="noopener noreferrer"`)
-- Se ubican en el **pie de página** con íconos SVG oficiales
+- Se ubican en el **pie de página** con íconos SVG oficiales con colores de marca
 - Botón flotante de WhatsApp: esquina inferior derecha, siempre visible, círculo verde `#25D366`
 
 ---
 ## 🏅 Enlaces de afiliación institucional
-| Institución          | Enlace oficial          | Propósito |
-| -------------------- | ------------------------ | --------- |
+| Institución          | Enlace oficial            | Propósito |
+| -------------------- | -------------------------- | --------- |
 | SKIF Internacional   | https://www.skifworld.com/ | Organización mundial Shotokan |
-| WKF — Federación Mundial | https://www.wkf.net/ | Reconocimiento oficial del karate |
+| WKF — Federación Mundial | https://www.wkf.net/     | Reconocimiento oficial del karate |
 
 - Se ubican en la sección **Nosotros**, debajo de las tarjetas
 - Se abren en pestaña nueva con atributos de seguridad
@@ -146,8 +166,9 @@
 
 ---
 ## 🚀 Crecimiento futuro
-- Componente principal único para la página de inicio
-- Cada función nueva (formulario, panel, etc.) → componente separado
+- Estructura lista para agregar **Nuestros Senseis** (segundo instructor) dentro de `about-section`
+- Video de fondo en `hero-section` con desenfoque y capa de color de marca
+- Imágenes ampliables con Lightbox en tarjetas de equipos y clases
+- Cada función nueva (formulario, galería ampliada, panel) → componente propio
 - Lógica compartida → servicios Angular
-- Diseño visual y paleta intactos al agregar funciones
-- Fotos y contenido se actualizan directamente en archivos del proyecto
+- Diseño visual y paleta intactos al escalar

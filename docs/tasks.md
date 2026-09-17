@@ -1,4 +1,4 @@
-# Tareas: página de inicio — Dojo Doryokukan
+# Tareas: Dojo Doryokukan — Sitio Web
 Orden de ejecución. Cada ítem es comprobable.
 Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 ---
@@ -6,75 +6,87 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [x] Reescribir `proposal.md` con identidad real del dojo (sensei, SKIF, público, valores, alcance).
 - [x] Reescribir `design.md` con paleta, archivos, mapa de secciones/anclas y decisiones de diseño.
 - [x] **Actualizar `design.md` con ajustes recientes:** logo con imagen, teléfonos cliqueables, horarios resaltados, galería con widget de Instagram, sección Inscripciones independiente, redes sociales con íconos, botón flotante WhatsApp.
+- [x] **Actualizar `design.md` con arquitectura de componentes Angular 22:** estructura de carpetas, patrón de división, reglas de anclas y rutas.
 - [x] Reescribir esta lista alineada al diseño nuevo.
 - [x] **Hecho cuando:** los tres archivos coinciden entre sí y con los datos reales del dojo.
 ---
-## 2. Base
-- [x] Crear estructura base con título y metadatos correctos.
-- [x] Título y meta descripción optimizados: ubicación y palabras clave agregadas.
-- [x] Enlazar hoja de estilos y verificar carga.
-- [x] **Hecho cuando:** la página abre y muestra el título correcto en la pestaña.
----
-## 3. Marcado y contenido
-- [x] Header con logo + navegación: Inicio, Nosotros, Clases, Cronograma, Galería, Atletas, Inscripciones (menú desplegable en móvil).
-- [x] Hero: nombre, eslogan, SKIF Colombia, inscripciones abiertas, botón **Inscríbete**.
-- [x] Sección Nosotros (Sensei Ernesto Márquez) con foto real `images/sensei.png`.
-- [x] Sección Clases: tres tarjetas con foto — Niños (`clase-ninos.png`), Jóvenes (`clase-jovenes.png`), Adultos (`clase-adultos.png`).
-- [x] Sección Valores: cuatro valores oficiales — Disciplina, Respeto, Esfuerzo, Honor.
-- [x] Sección Cronograma: horarios por categoría con horas resaltadas.
-- [x] **Sección Galería actualizada:** widget embebido de Instagram + enlace directo al perfil @dojodoryokukan.
-- [x] Sección Atletas: tres tarjetas con foto — Equipo infantil, juvenil y adulto.
-- [x] **Sección Inscripciones independiente:** requisitos, edades, horarios, prueba sin compromiso + botón directo a WhatsApp.
-- [x] Footer actualizado: dirección, teléfono cliqueable, enlaces del menú, **redes sociales con íconos oficiales** (Instagram, Facebook, YouTube, WhatsApp), derechos reservados.
-- [x] Un solo `h1` en toda la página. Datos confirmados publicados; sin información inventada.
-- [x] Teléfono convertido en enlace: `tel:+573052403346` funcional en contacto y pie.
-- [x] Sección Nosotros: enlaces oficiales a SKIF Internacional (skifworld.com) y WKF (wkf.net).
-- [x] Botón flotante de WhatsApp: esquina inferior derecha, siempre visible, abre conversación directa `wa.me/573052403346`.
-- [x] **Hecho cuando:** cada enlace del menú lleva a su sección correcta; todos los datos coinciden con la realidad.
----
-## 4. Estilos
-- [x] Variables de paleta oficiales: rojo, negro, blanco, oro.
-- [x] Fondo oscuro, secciones alternadas, bordes decorativos, tarjetas y botones.
-- [x] Diseño responsivo: 1 columna en móvil, grillas en tablet y escritorio.
-- [x] Soporte de accesibilidad: `prefers-reduced-motion`, indicador de foco visible en oro.
-- [x] **Estilos agregados:**
-  - [x] `.logo__imagen` — imagen circular en lugar de emblema tipográfico.
-  - [x] `.horario__hora` — resaltado de horarios en rojo y negrita.
-  - [x] `.enlace-telefono` — números cliqueables con estilo diferenciado.
-  - [x] `.redes` / `.icono-svg` — íconos oficiales de redes con color de marca.
-  - [x] `.boton-whatsapp-flotante` — posición fija, color verde oficial, efecto de escala.
-- [x] Estilos de enlaces de afiliación: centrado, línea divisoria superior, color dorado al pasar cursor.
-- [x] **Hecho cuando:** todos los ajustes visuales funcionan; contraste suficiente en todos los fondos.
----
-## 5. Verificación
-- [ ] Recorrer menú completo y comprobar navegación hasta **Inscripciones**.
-- [ ] Probar diseño en: ~360px (móvil), tablet y escritorio.
-- [ ] Verificar que teléfonos al hacer clic abren acción de llamada.
-- [ ] Confirmar que el widget de Instagram carga y se visualiza correctamente.
-- [ ] Confirmar que no hay JavaScript obligatorio; todo funciona con HTML y CSS.
-- [x] Confirmar que enlaces SKIF y WKF abren en pestaña nueva y muestran efecto al pasar el cursor.
-- [x] Confirmar que el título aparece correcto en la pestaña del navegador.
-- [x] Confirmar que el botón de WhatsApp permanece visible al desplazarse y abre en pestaña nueva.
-- [x] Confirmar que los enlaces de redes sociales abren en pestaña nueva con atributos de seguridad.
-- [ ] **Hecho cuando:** se cumplen todos los criterios de éxito definidos en la propuesta.
----
-## Datos ya incorporados (antes pendientes ✅)
-| Elemento | Estado |
-| -------- | ------ |
-| Teléfono oficial | ✅ Publicado y cliqueable |
-| WhatsApp | ✅ Enlace directo + botón flotante |
-| Dirección / Sede | ✅ Coliseo de Megacolegio, Villa del Rosario |
-| Horarios por categoría | ✅ Estructura lista; contenido según cronograma |
-| Fotos del dojo | ✅ Tarjetas de Nosotros, Clases y Atletas con imágenes reales |
-| Logo del dojo | ✅ Imagen en `public/images/logo-doryokukan.jpg` |
-| Redes sociales | ✅ Instagram, Facebook, YouTube, WhatsApp con íconos oficiales |
-| Afiliación SKIF / WKF | ✅ Enlaces oficiales en sección Nosotros |
----
-## Paso adicional: Migración a Angular
+## 2. Base y Migración a Angular
 - [x] Crear proyecto Angular nuevo con estructura recomendada.
 - [x] Copiar marcado HTML → `src/app/app.component.html`.
 - [x] Copiar estilos completos → `src/app/app.component.css`.
+- [x] Título y meta descripción optimizados: ubicación y palabras clave agregadas en `index.html`.
+- [x] Configurar despliegue automático: GitHub Actions → `ng build` → subir a AWS S3 + CloudFront.
 - [ ] Verificar que todo se vea y funcione **exactamente igual** que la versión original.
-- [x] Configurar despliegue automático: GitHub Actions → compilar → subir a AWS S3.
-- [ ] Agregar primera función nueva como componente Angular independiente.
-- [ ] **Hecho cuando:** cada commit en rama principal actualiza automáticamente el sitio en producción.
+- [ ] **Hecho cuando:** `ng serve` abre el sitio completo sin errores; cada commit en `main` actualiza producción automáticamente.
+---
+## 3. Reestructuración: División en Componentes
+- [x] Definir estructura de componentes en `design.md`.
+- [ ] Ejecutar generación de componentes:
+  - [ ] `ng generate component components/header-nav`
+  - [ ] `ng generate component components/hero-section`
+  - [ ] `ng generate component components/about-section`
+  - [ ] `ng generate component components/classes-section`
+  - [ ] `ng generate component components/values-section`
+  - [ ] `ng generate component components/schedule-section`
+  - [ ] `ng generate component components/gallery-section`
+  - [ ] `ng generate component components/team-section`
+  - [ ] `ng generate component components/enrollment-section`
+  - [ ] `ng generate component components/site-footer`
+- [ ] Extraer y mover contenido a cada componente:
+  - [ ] `<header>` → `header-nav.component.html` + estilos específicos
+  - [ ] `<section id="inicio">` → `hero-section.component.html` + estilos específicos
+  - [ ] `<section id="nosotros">` → `about-section.component.html` + estilos específicos
+  - [ ] `<section id="clases">` → `classes-section.component.html` + estilos específicos
+  - [ ] `<section id="valores">` → `values-section.component.html` + estilos específicos
+  - [ ] `<section id="cronograma">` → `schedule-section.component.html` + estilos específicos
+  - [ ] `<section id="galeria">` → `gallery-section.component.html` + estilos específicos
+  - [ ] `<section id="atletas">` → `team-section.component.html` + estilos específicos
+  - [ ] `<section id="inscripciones">` → `enrollment-section.component.html` + estilos específicos
+  - [ ] `<footer>` → `site-footer.component.html` + estilos específicos
+- [ ] Limpiar `app.component.html` → dejar solo etiquetas de componentes + `<router-outlet />`
+- [ ] Consolidar estilos globales en `app.component.css`: `:root`, reseteos, `.envoltorio`, `.rejilla`, `.tarjeta`, `.boton`
+- [ ] **Hecho cuando:** el sitio se ve IDÉNTICO y funciona igual que antes; todas las anclas (`#inicio`, `#nosotros`, etc.) navegan correctamente.
+---
+## 4. Mejoras y Funcionalidades Nuevas
+- [ ] **Botones redondeados + interacción:**
+  - [ ] Aplicar `border-radius: 8px` a todos los botones
+  - [ ] Botón rojo: `hover` → `#B71C1C` + elevación + sombra
+  - [ ] Botón dorado: `hover` → fondo `#C9A227` + texto `#000` + elevación + sombra
+  - [ ] Transición `all 0.3s ease` en estados
+- [ ] **Sección "Nuestros Senseis" ampliada:**
+  - [ ] Agregar segunda tarjeta dentro de `about-section`
+  - [ ] Incluir foto, nombre, grado, experiencia, logros y biografía del segundo instructor
+  - [ ] Diseño: dos tarjetas lado a lado en escritorio, apiladas en móvil
+- [ ] **Video de fondo en portada:**
+  - [ ] Optimizar video corto (5–10s, sin audio, ≤ 5MB) → `public/videos/hero-bg.mp4`
+  - [ ] Agregar elemento `<video>` dentro de `hero-section`
+  - [ ] Aplicar desenfoque `blur(4px)` + capa oscura con matiz rojo sobre el video
+  - [ ] Imagen estática de respaldo en móvil para ahorrar datos
+- [ ] **Imágenes ampliables (Lightbox):**
+  - [ ] Agregar clase e ícono de lupa a imágenes de tarjetas
+  - [ ] Modal de imagen ampliada: abrir centrado, fondo oscuro
+  - [ ] Cerrar con botón X, clic fuera y tecla ESC
+  - [ ] Bloquear desplazamiento de página mientras modal está abierto
+- [ ] **Hecho cuando:** cada mejora funciona sin romper el resto; comportamiento consistente en móvil y escritorio.
+---
+## 5. Verificación Final
+- [ ] Recorrer menú completo y comprobar navegación por anclas.
+- [ ] Probar diseño en: ~360px (móvil), tablet y escritorio.
+- [ ] Verificar que teléfonos al hacer clic abren llamada.
+- [ ] Confirmar que widget de Instagram carga correctamente.
+- [ ] Confirmar que todos los enlaces externos abren en pestaña nueva con `rel="noopener"`.
+- [ ] Ejecutar `ng test` → todas las pruebas pasan.
+- [ ] Revisar despliegue en producción: no hay archivos rotos ni rutas incorrectas.
+- [ ] **Hecho cuando:** el sitio está listo y estable; se puede compartir públicamente sin reservas.
+---
+## ✅ Datos Base Confirmados
+| Elemento | Estado |
+| -------- | ------ |
+| Identidad del dojo | ✅ Doryokukan — SKIF Colombia |
+| Sensei principal | ✅ Ernesto Márquez |
+| Ubicación | ✅ Coliseo de Megacolegio, Villa del Rosario |
+| Teléfono / WhatsApp | ✅ +57 305 240 3346 |
+| Redes sociales | ✅ Instagram · Facebook · YouTube |
+| Afiliaciones | ✅ SKIF Internacional · WKF |
+| Horarios base | ✅ Definidos por categoría |
+| Imágenes del dojo | ✅ En `public/images/` referenciadas correctamente |

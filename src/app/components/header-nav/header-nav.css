@@ -1,0 +1,146 @@
+.sitio-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--negro-profundo);
+  border-bottom: 2px solid var(--rojo);
+}
+
+.sitio-header__barra {
+  width: min(var(--ancho), calc(100% - 2rem));
+  margin-inline: auto;
+  min-height: var(--header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--blanco);
+}
+
+.logo__imagen {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.logo__texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo__nombre {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.logo__sub {
+  font-size: 0.7rem;
+  color: var(--hueso);
+  letter-spacing: 0.04em;
+}
+
+.nav--escritorio {
+  display: none;
+}
+
+.nav-panel {
+  position: relative;
+}
+
+.nav-panel__boton {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--oro);
+  color: var(--oro);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.nav-panel__boton::-webkit-details-marker {
+  display: none;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0.75rem 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nav a {
+  display: block;
+  padding: 0.35rem 0;
+  color: var(--blanco);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  border-bottom: 1px solid transparent;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--oro);
+  border-bottom-color: var(--oro);
+}
+
+.nav-panel[open] .nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  min-width: 14rem;
+  padding: 1rem 1.15rem 1.15rem;
+  background: var(--negro);
+  border: 1px solid var(--rojo);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.saltar {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.5rem 0.75rem;
+  background: var(--oro);
+  color: var(--negro);
+  text-decoration: none;
+}
+
+.saltar:focus {
+  top: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .nav-panel {
+    display: none;
+  }
+  .nav--escritorio {
+    display: block;
+  }
+  .nav--escritorio ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0;
+    gap: 0.2rem 1.1rem;
+  }
+}
