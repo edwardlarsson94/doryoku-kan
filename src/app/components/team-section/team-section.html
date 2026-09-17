@@ -8,21 +8,39 @@
     </p>
     <div class="rejilla rejilla--tres">
       <article class="tarjeta tarjeta--imagen">
-        <img src="images/equipo-infantil.png" alt="Equipo infantil de competencia" loading="lazy" />
+        <img
+          src="images/equipo-infantil.png"
+          alt="Equipo infantil de competencia"
+          loading="lazy"
+          (click)="openImage('images/equipo-infantil.png', 'Equipo infantil de competencia')"
+          class="foto-clicable"
+        />
         <div>
           <h3>Equipo infantil</h3>
           <p>Primeras competencias y formación en kata y kumite.</p>
         </div>
       </article>
       <article class="tarjeta tarjeta--imagen">
-        <img src="images/equipo-juvenil.png" alt="Equipo juvenil de competencia" loading="lazy" />
+        <img
+          src="images/equipo-juvenil.png"
+          alt="Equipo juvenil de competencia"
+          loading="lazy"
+          (click)="openImage('images/equipo-juvenil.png', 'Equipo juvenil de competencia')"
+          class="foto-clicable"
+        />
         <div>
           <h3>Equipo juvenil</h3>
           <p>Representación en encuentros regionales y nacionales SKIF.</p>
         </div>
       </article>
       <article class="tarjeta tarjeta--imagen">
-        <img src="images/equipo-adulto.png" alt="Equipo adulto de competencia" loading="lazy" />
+        <img
+          src="images/equipo-adulto.png"
+          alt="Equipo adulto de competencia"
+          loading="lazy"
+          (click)="openImage('images/equipo-adulto.png', 'Equipo adulto de competencia')"
+          class="foto-clicable"
+        />
         <div>
           <h3>Equipo adulto</h3>
           <p>Práctica avanzada y apoyo a la línea del dojo.</p>
@@ -30,4 +48,11 @@
       </article>
     </div>
   </div>
+
+  <app-lightbox
+    [isOpen]="!!selectedImage"
+    [imageUrl]="selectedImage?.url || ''"
+    [imageAlt]="selectedImage?.alt || ''"
+    (closed)="closeImage()"
+  ></app-lightbox>
 </section>

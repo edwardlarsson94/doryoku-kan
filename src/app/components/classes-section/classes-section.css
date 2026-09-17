@@ -33,3 +33,13 @@
 .seccion--oscura .tarjeta p {
   color: var(--hueso);
 }
+
+.foto-clicable {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.foto-clicable:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}

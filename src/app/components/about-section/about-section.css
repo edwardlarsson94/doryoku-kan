@@ -1,4 +1,3 @@
-/* Contenedor principal — dos fotos + contenido */
 .nosotros-contenido {
   display: grid;
   grid-template-columns: 22rem 1fr;
@@ -6,13 +5,11 @@
   align-items: center;
 }
 
-/* Rejilla de fotos de los senseis */
 .nosotros-imagenes {
   display: grid;
   gap: 1.5rem;
 }
 
-/* Imagen individual del sensei */
 .sensei-foto img {
   width: 100%;
   border: 4px solid var(--oro);
@@ -30,7 +27,6 @@
   color: var(--negro);
 }
 
-/* Tarjetas — fondo crema */
 .tarjeta {
   background: #f8f4eb;
   padding: 1.75rem 2rem;
@@ -40,7 +36,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Esquinas decorativas */
 .tarjeta::before,
 .tarjeta::after {
   content: '';
@@ -63,7 +58,6 @@
   border-width: 2px 0 0 2px;
 }
 
-/* Etiquetas SENSEI / INSTRUCTORA / EL NOMBRE — ROJO */
 .tarjeta__kicker {
   color: var(--rojo);
   font-size: 0.75rem;
@@ -92,7 +86,6 @@
   margin-bottom: 0;
 }
 
-/* Línea dorada COMPLETA debajo del título */
 .seccion--clara h2 {
   border-bottom: 2px solid var(--oro);
   padding-bottom: 0.75rem;
@@ -100,7 +93,6 @@
   width: 100%;
 }
 
-/* Afiliación — centrada, enlaces DORADOS */
 .afiliacion {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
@@ -120,7 +112,16 @@
   text-decoration: underline;
 }
 
-/* Responsivo — se apila en móvil */
+.foto-clicable {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.foto-clicable:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
 @media (max-width: 47.99rem) {
   .nosotros-contenido {
     grid-template-columns: 1fr;

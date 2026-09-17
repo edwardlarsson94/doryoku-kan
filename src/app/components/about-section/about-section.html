@@ -5,15 +5,26 @@
     <div class="nosotros-contenido">
       <div class="nosotros-imagenes">
         <figure class="sensei-foto">
-          <img src="images/sensei-ernesto.png" alt="Sensei Ernesto Márquez" loading="lazy" />
+          <img
+            src="images/sensei-ernesto.png"
+            alt="Sensei Ernesto Márquez"
+            loading="lazy"
+            (click)="openImage('images/sensei-ernesto.png', 'Sensei Ernesto Márquez')"
+            class="foto-clicable"
+          />
           <figcaption class="sensei-foto__nombre">Ernesto Márquez</figcaption>
         </figure>
         <figure class="sensei-foto">
-          <img src="images/sensei-victoria.png" alt="Sensei Victoria Márquez" loading="lazy" />
+          <img
+            src="images/sensei-victoria.png"
+            alt="Sensei Victoria Márquez"
+            loading="lazy"
+            (click)="openImage('images/sensei-victoria.png', 'Sensei Victoria Márquez')"
+            class="foto-clicable"
+          />
           <figcaption class="sensei-foto__nombre">Victoria Márquez</figcaption>
         </figure>
       </div>
-
       <div class="nosotros-texto">
         <article class="tarjeta">
           <p class="tarjeta__kicker">SENSEI PRINCIPAL</p>
@@ -28,7 +39,6 @@
             de respeto hacia compañeros, instructores y el propio cuerpo.
           </p>
         </article>
-
         <article class="tarjeta">
           <p class="tarjeta__kicker">INSTRUCTORA</p>
           <h3>VICTORIA MÁRQUEZ</h3>
@@ -41,7 +51,6 @@
             disciplina, respeto y esfuerzo en cada entrenamiento.
           </p>
         </article>
-
         <article class="tarjeta">
           <p class="tarjeta__kicker">EL NOMBRE</p>
           <h3>DORYOKUKAN</h3>
@@ -65,4 +74,11 @@
       </p>
     </div>
   </div>
+
+  <app-lightbox
+    [isOpen]="!!selectedImage"
+    [imageUrl]="selectedImage?.url || ''"
+    [imageAlt]="selectedImage?.alt || ''"
+    (closed)="closeImage()"
+  ></app-lightbox>
 </section>

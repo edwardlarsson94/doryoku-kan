@@ -1,0 +1,10 @@
+@if (isOpen) {
+  <div class="lightbox-overlay" (click)="close()" role="dialog" aria-modal="true">
+    <button class="lightbox-close" aria-label="Cerrar" (click)="$event.stopPropagation(); close()">
+      ✕
+    </button>
+    <div class="lightbox-image-container" (click)="$event.stopPropagation()">
+      <img [src]="imageUrl" [alt]="imageAlt" loading="lazy" />
+    </div>
+  </div>
+}

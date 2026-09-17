@@ -8,7 +8,13 @@
     </p>
     <div class="rejilla rejilla--tres">
       <article class="tarjeta tarjeta--imagen">
-        <img src="images/clase-ninos.png" alt="Clase de karate para niños" loading="lazy" />
+        <img
+          src="images/clase-ninos.png"
+          alt="Clase de karate para niños"
+          loading="lazy"
+          (click)="openImage('images/clase-ninos.png', 'Clase de karate para niños')"
+          class="foto-clicable"
+        />
         <div>
           <p class="tarjeta__kicker">Categoría</p>
           <h3>Niños</h3>
@@ -19,7 +25,13 @@
         </div>
       </article>
       <article class="tarjeta tarjeta--imagen">
-        <img src="images/clase-jovenes.png" alt="Clase de karate para jóvenes" loading="lazy" />
+        <img
+          src="images/clase-jovenes.png"
+          alt="Clase de karate para jóvenes"
+          loading="lazy"
+          (click)="openImage('images/clase-jovenes.png', 'Clase de karate para jóvenes')"
+          class="foto-clicable"
+        />
         <div>
           <p class="tarjeta__kicker">Categoría</p>
           <h3>Jóvenes</h3>
@@ -30,7 +42,13 @@
         </div>
       </article>
       <article class="tarjeta tarjeta--imagen">
-        <img src="images/clase-adultos.png" alt="Clase de karate para adultos" loading="lazy" />
+        <img
+          src="images/clase-adultos.png"
+          alt="Clase de karate para adultos"
+          loading="lazy"
+          (click)="openImage('images/clase-adultos.png', 'Clase de karate para adultos')"
+          class="foto-clicable"
+        />
         <div>
           <p class="tarjeta__kicker">Categoría</p>
           <h3>Adultos</h3>
@@ -42,4 +60,11 @@
       </article>
     </div>
   </div>
+
+  <app-lightbox
+    [isOpen]="!!selectedImage"
+    [imageUrl]="selectedImage?.url || ''"
+    [imageAlt]="selectedImage?.alt || ''"
+    (closed)="closeImage()"
+  ></app-lightbox>
 </section>
