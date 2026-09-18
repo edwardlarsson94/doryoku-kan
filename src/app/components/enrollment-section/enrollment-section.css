@@ -1,7 +1,3 @@
-.inscripciones {
-  max-width: 40rem;
-}
-
 .inscripciones h3 {
   margin: 1.5rem 0 0.75rem;
   text-transform: uppercase;
@@ -22,4 +18,10 @@
 
 .cta-boton {
   margin-top: 2rem;
+}
+
+.cta-boton--centrado {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--espacio) * 1.6);
 }

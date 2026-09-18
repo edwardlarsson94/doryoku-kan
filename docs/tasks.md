@@ -16,57 +16,69 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [x] Copiar estilos completos → `src/app/app.component.css`.
 - [x] Título y meta descripción optimizados: ubicación y palabras clave agregadas en `index.html`.
 - [x] Configurar despliegue automático: GitHub Actions → `ng build` → subir a AWS S3 + CloudFront.
-- [ ] Verificar que todo se vea y funcione **exactamente igual** que la versión original.
-- [ ] **Hecho cuando:** `ng serve` abre el sitio completo sin errores; cada commit en `main` actualiza producción automáticamente.
+- [x] Verificar que todo se vea y funcione **exactamente igual** que la versión original.
+- [x] **Hecho cuando:** `ng serve` abre el sitio completo sin errores; cada commit en `main` actualiza producción automáticamente.
 ---
 ## 3. Reestructuración: División en Componentes
 - [x] Definir estructura de componentes en `design.md`.
-- [ ] Ejecutar generación de componentes:
-  - [ ] `ng generate component components/header-nav`
-  - [ ] `ng generate component components/hero-section`
-  - [ ] `ng generate component components/about-section`
-  - [ ] `ng generate component components/classes-section`
-  - [ ] `ng generate component components/values-section`
-  - [ ] `ng generate component components/schedule-section`
-  - [ ] `ng generate component components/gallery-section`
-  - [ ] `ng generate component components/team-section`
-  - [ ] `ng generate component components/enrollment-section`
-  - [ ] `ng generate component components/site-footer`
-- [ ] Extraer y mover contenido a cada componente:
-  - [ ] `<header>` → `header-nav.component.html` + estilos específicos
-  - [ ] `<section id="inicio">` → `hero-section.component.html` + estilos específicos
-  - [ ] `<section id="nosotros">` → `about-section.component.html` + estilos específicos
-  - [ ] `<section id="clases">` → `classes-section.component.html` + estilos específicos
-  - [ ] `<section id="valores">` → `values-section.component.html` + estilos específicos
-  - [ ] `<section id="cronograma">` → `schedule-section.component.html` + estilos específicos
-  - [ ] `<section id="galeria">` → `gallery-section.component.html` + estilos específicos
-  - [ ] `<section id="atletas">` → `team-section.component.html` + estilos específicos
-  - [ ] `<section id="inscripciones">` → `enrollment-section.component.html` + estilos específicos
-  - [ ] `<footer>` → `site-footer.component.html` + estilos específicos
-- [ ] Limpiar `app.component.html` → dejar solo etiquetas de componentes + `<router-outlet />`
-- [ ] Consolidar estilos globales en `app.component.css`: `:root`, reseteos, `.envoltorio`, `.rejilla`, `.tarjeta`, `.boton`
-- [ ] **Hecho cuando:** el sitio se ve IDÉNTICO y funciona igual que antes; todas las anclas (`#inicio`, `#nosotros`, etc.) navegan correctamente.
+- [x] Ejecutar generación de componentes:
+  - [x] `ng generate component components/header-nav`
+  - [x] `ng generate component components/hero-section`
+  - [x] `ng generate component components/about-section`
+  - [x] `ng generate component components/classes-section`
+  - [x] `ng generate component components/values-section`
+  - [x] `ng generate component components/schedule-section`
+  - [x] `ng generate component components/gallery-section`
+  - [x] `ng generate component components/team-section`
+  - [x] `ng generate component components/enrollment-section`
+  - [x] `ng generate component components/site-footer`
+- [x] Extraer y mover contenido a cada componente:
+  - [x] `<header>` → `header-nav.component.html` + estilos específicos
+  - [x] `<section id="inicio">` → `hero-section.component.html` + estilos específicos
+  - [x] `<section id="nosotros">` → `about-section.component.html` + estilos específicos
+  - [x] `<section id="clases">` → `classes-section.component.html` + estilos específicos
+  - [x] `<section id="valores">` → `values-section.component.html` + estilos específicos
+  - [x] `<section id="cronograma">` → `schedule-section.component.html` + estilos específicos
+  - [x] `<section id="galeria">` → `gallery-section.component.html` + estilos específicos
+  - [x] `<section id="atletas">` → `team-section.component.html` + estilos específicos
+  - [x] `<section id="inscripciones">` → `enrollment-section.component.html` + estilos específicos
+  - [x] `<footer>` → `site-footer.component.html` + estilos específicos
+- [x] Limpiar `app.component.html` → dejar solo etiquetas de componentes + `<router-outlet />`
+- [x] Consolidar estilos globales en `app.component.css`: `:root`, reseteos, `.envoltorio`, `.rejilla`, `.tarjeta`, `.boton`
+- [x] **Hecho cuando:** el sitio se ve IDÉNTICO y funciona igual que antes; todas las anclas (`#inicio`, `#nosotros`, etc.) navegan correctamente.
 ---
 ## 4. Mejoras y Funcionalidades Nuevas
-- [ ] **Botones redondeados + interacción:**
+- [x] **Imágenes ampliables (Lightbox):**
+  - [x] Fotos de Clases → Lightbox funcional
+  - [x] Fotos de Senseis → Lightbox funcional
+  - [x] Fotos de Equipos → Lightbox funcional
+  - [x] Botón cerrar ✕ visible en todas las secciones con borde dorado
+  - [x] Cerrar con botón, clic fuera y tecla ESC
+- [x] **Botones redondeados + interacción de colores:**
   - [ ] Aplicar `border-radius: 8px` a todos los botones
-  - [ ] Botón rojo: `hover` → `#B71C1C` + elevación + sombra
-  - [ ] Botón dorado: `hover` → fondo `#C9A227` + texto `#000` + elevación + sombra
-  - [ ] Transición `all 0.3s ease` en estados
-- [ ] **Sección "Nuestros Senseis" ampliada:**
-  - [ ] Agregar segunda tarjeta dentro de `about-section`
-  - [ ] Incluir foto, nombre, grado, experiencia, logros y biografía del segundo instructor
-  - [ ] Diseño: dos tarjetas lado a lado en escritorio, apiladas en móvil
-- [ ] **Video de fondo en portada:**
-  - [ ] Optimizar video corto (5–10s, sin audio, ≤ 5MB) → `public/videos/hero-bg.mp4`
-  - [ ] Agregar elemento `<video>` dentro de `hero-section`
-  - [ ] Aplicar desenfoque `blur(4px)` + capa oscura con matiz rojo sobre el video
-  - [ ] Imagen estática de respaldo en móvil para ahorrar datos
-- [ ] **Imágenes ampliables (Lightbox):**
-  - [ ] Agregar clase e ícono de lupa a imágenes de tarjetas
-  - [ ] Modal de imagen ampliada: abrir centrado, fondo oscuro
-  - [ ] Cerrar con botón X, clic fuera y tecla ESC
-  - [ ] Bloquear desplazamiento de página mientras modal está abierto
+  -[x] Botón rojo: `hover` → `#B71C1C` + elevación + sombra
+  -[x] Botón dorado: `hover` → fondo `#C9A227` + texto `#000` + elevación + sombra
+  -[x] Transición `all 0.3s ease` en estados
+-[x] **Sección "Nuestros Senseis" ampliada:**
+  -[x] Agregar segunda tarjeta dentro de `about-section`
+  -[x] Incluir foto, nombre, grado, experiencia, logros y biografía del segundo instructor
+  -[x] Diseño: dos tarjetas lado a lado en escritorio, apiladas en móvil
+-[x] **Video de fondo en portada:**
+  -[x] Optimizar video corto (5–10s, sin audio, ≤ 5MB) → `public/videos/hero-bg.mp4`
+  -[x] Agregar elemento `<video>` dentro de `hero-section`
+  -[x] Aplicar desenfoque `blur(4px)` + capa oscura con matiz rojo sobre el video
+  -[x] Imagen estática de respaldo en móvil para ahorrar datos
+- [x] **Centrar botón de WhatsApp:**
+  - [x] Contenedor centrado en sección Inscripciones
+  - [x] Mantiene estilo y responde en móvil
+- [ ] **Menú de navegación más moderno:**
+  - [ ] Espaciado, peso y transiciones mejoradas
+  - [ ] Estado activo y `hover` resaltado
+  - [ ] Versión móvil / hamburguesa refinada
+- [ ] **Mapa de Google Maps embebido:**
+  - [ ] Insertar dirección real del dojo
+  - [ ] Marco responsivo, se adapta a móvil
+  - [ ] Enlace directo a "Cómo llegar" en Google Maps
 - [ ] **Hecho cuando:** cada mejora funciona sin romper el resto; comportamiento consistente en móvil y escritorio.
 ---
 ## 5. Verificación Final

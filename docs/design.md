@@ -172,3 +172,8 @@ src/app/
 - Cada función nueva (formulario, galería ampliada, panel) → componente propio
 - Lógica compartida → servicios Angular
 - Diseño visual y paleta intactos al escalar
+
+- **Imágenes ampliables con Lightbox**: al hacer clic en fotos de Clases, Senseis y Equipos se abren en vista ampliada centrada. Botón de cierre visible con borde dorado, fondo semitransparente, cierra con clic fuera o tecla ESC.
+- **Botón de WhatsApp centrado**: en sección Inscripciones, contenedor centrado para mayor visibilidad.
+- **Mapa de Google Maps embebido**: dirección real del dojo insertada en sección Contacto/Ubicación, responsivo con enlace directo a "Cómo llegar".
+- **Menú de navegación refinado**: espaciado, estados activos y transiciones mejoradas para apariencia más moderna.
