@@ -10,6 +10,40 @@
   gap: 1.5rem;
 }
 
+.sitio-pie__ubicacion {
+  grid-column: 1 / -1;
+}
+
+.mapa-ubicacion {
+  width: 100%;
+  min-height: 280px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--oro);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.mapa-ubicacion iframe {
+  display: block;
+  width: 100%;
+  min-height: 280px;
+  height: 100%;
+  border: 0;
+}
+
+.mapa-ubicacion__enlace {
+  text-align: center;
+}
+
+.mapa-ubicacion__enlace a {
+  color: var(--oro);
+}
+
+.mapa-ubicacion__enlace a:hover {
+  text-decoration: underline;
+}
+
 .sitio-pie__marca {
   margin: 0 0 0.35rem;
   color: var(--blanco);

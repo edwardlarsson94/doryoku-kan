@@ -75,21 +75,21 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
   - [x] Espaciado, peso y transiciones mejoradas
   - [x] Estado activo y `hover` resaltado
   - [x] Versión móvil / hamburguesa refinada
-- [ ] **Mapa de Google Maps embebido:**
-  - [ ] Insertar dirección real del dojo
-  - [ ] Marco responsivo, se adapta a móvil
-  - [ ] Enlace directo a "Cómo llegar" en Google Maps
+- [x] **Mapa de Google Maps embebido:**
+  - [x] Insertar dirección real del dojo
+  - [x] Marco responsivo, se adapta a móvil
+  - [x] Enlace directo a "Cómo llegar" en Google Maps
 - [ ] **Hecho cuando:** cada mejora funciona sin romper el resto; comportamiento consistente en móvil y escritorio.
 ---
 ## 5. Verificación Final
 - [x] Recorrer menú completo y comprobar navegación por anclas.
 - [x] Probar diseño en: ~360px (móvil), tablet y escritorio.
-- [ ] Verificar que teléfonos al hacer clic abren llamada.
-- [ ] Confirmar que widget de Instagram carga correctamente.
-- [ ] Confirmar que todos los enlaces externos abren en pestaña nueva con `rel="noopener"`.
+- [x] Verificar que teléfonos al hacer clic abren llamada.
+- [x] Confirmar que widget de Instagram carga correctamente.
+- [x] Confirmar que todos los enlaces externos abren en pestaña nueva con `rel="noopener"`.
 - [ ] Ejecutar `ng test` → todas las pruebas pasan.
-- [ ] Revisar despliegue en producción: no hay archivos rotos ni rutas incorrectas.
-- [ ] **Hecho cuando:** el sitio está listo y estable; se puede compartir públicamente sin reservas.
+- [x] Revisar despliegue en producción: no hay archivos rotos ni rutas incorrectas.
+- [x] **Hecho cuando:** el sitio está listo y estable; se puede compartir públicamente sin reservas.
 ---
 ## ✅ Datos Base Confirmados
 | Elemento | Estado |
