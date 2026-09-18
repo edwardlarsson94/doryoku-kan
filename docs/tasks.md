@@ -55,22 +55,26 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
   - [x] Botón cerrar ✕ visible en todas las secciones con borde dorado
   - [x] Cerrar con botón, clic fuera y tecla ESC
 - [x] **Botones redondeados + interacción de colores:**
-  - [ ] Aplicar `border-radius: 8px` a todos los botones
-  -[x] Botón rojo: `hover` → `#B71C1C` + elevación + sombra
-  -[x] Botón dorado: `hover` → fondo `#C9A227` + texto `#000` + elevación + sombra
-  -[x] Transición `all 0.3s ease` en estados
--[x] **Sección "Nuestros Senseis" ampliada:**
-  -[x] Agregar segunda tarjeta dentro de `about-section`
-  -[x] Incluir foto, nombre, grado, experiencia, logros y biografía del segundo instructor
-  -[x] Diseño: dos tarjetas lado a lado en escritorio, apiladas en móvil
--[x] **Video de fondo en portada:**
-  -[x] Optimizar video corto (5–10s, sin audio, ≤ 5MB) → `public/videos/hero-bg.mp4`
-  -[x] Agregar elemento `<video>` dentro de `hero-section`
-  -[x] Aplicar desenfoque `blur(4px)` + capa oscura con matiz rojo sobre el video
-  -[x] Imagen estática de respaldo en móvil para ahorrar datos
+  - [x] Aplicar `border-radius: 8px` a todos los botones
+  - [x] Botón rojo: `hover` → `#B71C1C` + elevación + sombra
+  - [x] Botón dorado: `hover` → fondo `#C9A227` + texto `#000` + elevación + sombra
+  - [x] Transición `all 0.3s ease` en estados
+- [x] **Sección "Nuestros Senseis" ampliada:**
+  - [x] Agregar segunda tarjeta dentro de `about-section`
+  - [x] Incluir foto, nombre, grado, experiencia, logros y biografía del segundo instructor
+  - [x] Diseño: dos tarjetas lado a lado en escritorio, apiladas en móvil
+- [x] **Video de fondo en portada:**
+  - [x] Optimizar video corto (5–10s, sin audio, ≤ 5MB) → `public/videos/hero-bg.mp4`
+  - [x] Agregar elemento `<video>` dentro de `hero-section`
+  - [x] Aplicar desenfoque `blur(4px)` + capa oscura con matiz rojo sobre el video
+  - [x] Imagen estática de respaldo en móvil para ahorrar datos
 - [x] **Centrar botón de WhatsApp:**
   - [x] Contenedor centrado en sección Inscripciones
   - [x] Mantiene estilo y responde en móvil
+- [x] **Mensaje automático en botón de WhatsApp:**
+  - [x] Enlace actualizado con `?text=` → mensaje predeterminado cargado automáticamente
+  - [x] Mensaje: "Hola, quiero inscribirme en el Dojo Doryokukan. Me gustaría recibir información para reservar mi cupo."
+  - [x] Verificado: al hacer clic → WhatsApp abre con texto listo para enviar
 - [x] **Menú de navegación más moderno:**
   - [x] Espaciado, peso y transiciones mejoradas
   - [x] Estado activo y `hover` resaltado
@@ -79,7 +83,7 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
   - [x] Insertar dirección real del dojo
   - [x] Marco responsivo, se adapta a móvil
   - [x] Enlace directo a "Cómo llegar" en Google Maps
-- [ ] **Hecho cuando:** cada mejora funciona sin romper el resto; comportamiento consistente en móvil y escritorio.
+- [x] **Hecho cuando:** cada mejora funciona sin romper el resto; comportamiento consistente en móvil y escritorio.
 ---
 ## 5. Verificación Final
 - [x] Recorrer menú completo y comprobar navegación por anclas.
@@ -95,9 +99,9 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 | Elemento | Estado |
 | -------- | ------ |
 | Identidad del dojo | ✅ Doryokukan — SKIF Colombia |
-| Sensei principal | ✅ Ernesto Márquez |
+| Senseis | ✅ Ernesto Márquez · Victoria Márquez |
 | Ubicación | ✅ Coliseo de Megacolegio, Villa del Rosario |
-| Teléfono / WhatsApp | ✅ +57 305 240 3346 |
+| WhatsApp con mensaje | ✅ +57 305 240 3346 → mensaje automático activado |
 | Redes sociales | ✅ Instagram · Facebook · YouTube |
 | Afiliaciones | ✅ SKIF Internacional · WKF |
 | Horarios base | ✅ Definidos por categoría |

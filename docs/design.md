@@ -147,6 +147,7 @@ src/app/
 - Todos los enlaces se abren en pestaña nueva (`target="_blank" rel="noopener noreferrer"`)
 - Se ubican en el **pie de página** con íconos SVG oficiales con colores de marca
 - Botón flotante de WhatsApp: esquina inferior derecha, siempre visible, círculo verde `#25D366`
+- Botón principal en sección Inscripciones: texto predeterminado cargado automáticamente al abrir el enlace
 
 ---
 ## 🏅 Enlaces de afiliación institucional
