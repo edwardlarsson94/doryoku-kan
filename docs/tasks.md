@@ -71,10 +71,10 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [x] **Centrar botón de WhatsApp:**
   - [x] Contenedor centrado en sección Inscripciones
   - [x] Mantiene estilo y responde en móvil
-- [ ] **Menú de navegación más moderno:**
-  - [ ] Espaciado, peso y transiciones mejoradas
-  - [ ] Estado activo y `hover` resaltado
-  - [ ] Versión móvil / hamburguesa refinada
+- [x] **Menú de navegación más moderno:**
+  - [x] Espaciado, peso y transiciones mejoradas
+  - [x] Estado activo y `hover` resaltado
+  - [x] Versión móvil / hamburguesa refinada
 - [ ] **Mapa de Google Maps embebido:**
   - [ ] Insertar dirección real del dojo
   - [ ] Marco responsivo, se adapta a móvil
@@ -82,8 +82,8 @@ Referencias: [proposal.md](./proposal.md), [design.md](./design.md).
 - [ ] **Hecho cuando:** cada mejora funciona sin romper el resto; comportamiento consistente en móvil y escritorio.
 ---
 ## 5. Verificación Final
-- [ ] Recorrer menú completo y comprobar navegación por anclas.
-- [ ] Probar diseño en: ~360px (móvil), tablet y escritorio.
+- [x] Recorrer menú completo y comprobar navegación por anclas.
+- [x] Probar diseño en: ~360px (móvil), tablet y escritorio.
 - [ ] Verificar que teléfonos al hacer clic abren llamada.
 - [ ] Confirmar que widget de Instagram carga correctamente.
 - [ ] Confirmar que todos los enlaces externos abren en pestaña nueva con `rel="noopener"`.

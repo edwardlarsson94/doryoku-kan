@@ -8,26 +8,30 @@
         <span class="logo__sub">Dojo · SKIF Colombia</span>
       </span>
     </a>
+
     <nav class="nav nav--escritorio" aria-label="Principal">
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#clases">Clases</a></li>
-        <li><a href="#cronograma">Cronograma</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#inscripciones">Inscripciones</a></li>
+        <li><a href="#inicio" [class.nav__enlace--activo]="activeSection() === 'inicio'" [attr.aria-current]="activeSection() === 'inicio' ? 'page' : null">Inicio</a></li>
+        <li><a href="#nosotros" [class.nav__enlace--activo]="activeSection() === 'nosotros'" [attr.aria-current]="activeSection() === 'nosotros' ? 'page' : null">Nosotros</a></li>
+        <li><a href="#clases" [class.nav__enlace--activo]="activeSection() === 'clases'" [attr.aria-current]="activeSection() === 'clases' ? 'page' : null">Clases</a></li>
+        <li><a href="#cronograma" [class.nav__enlace--activo]="activeSection() === 'cronograma'" [attr.aria-current]="activeSection() === 'cronograma' ? 'page' : null">Cronograma</a></li>
+        <li><a href="#galeria" [class.nav__enlace--activo]="activeSection() === 'galeria'" [attr.aria-current]="activeSection() === 'galeria' ? 'page' : null">Galería</a></li>
+        <li><a href="#inscripciones" [class.nav__enlace--activo]="activeSection() === 'inscripciones'" [attr.aria-current]="activeSection() === 'inscripciones' ? 'page' : null">Inscripciones</a></li>
       </ul>
     </nav>
-    <details class="nav-panel">
-      <summary class="nav-panel__boton">Menú</summary>
+
+    <details class="nav-panel" [open]="menuAbierto()">
+      <summary class="nav-panel__boton" (click)="$event.preventDefault(); alternarMenu()">
+        Menú
+      </summary>
       <nav class="nav" aria-label="Principal móvil">
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#clases">Clases</a></li>
-          <li><a href="#cronograma">Cronograma</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#inscripciones">Inscripciones</a></li>
+          <li><a href="#inicio" (click)="menuAbierto.set(false)" [class.nav__enlace--activo]="activeSection() === 'inicio'" [attr.aria-current]="activeSection() === 'inicio' ? 'page' : null">Inicio</a></li>
+          <li><a href="#nosotros" (click)="menuAbierto.set(false)" [class.nav__enlace--activo]="activeSection() === 'nosotros'" [attr.aria-current]="activeSection() === 'nosotros' ? 'page' : null">Nosotros</a></li>
+          <li><a href="#clases" (click)="menuAbierto.set(false)" [class.nav__enlace--activo]="activeSection() === 'clases'" [attr.aria-current]="activeSection() === 'clases' ? 'page' : null">Clases</a></li>
+          <li><a href="#cronograma" (click)="menuAbierto.set(false)" [class.nav__enlace--activo]="activeSection() === 'cronograma'" [attr.aria-current]="activeSection() === 'cronograma' ? 'page' : null">Cronograma</a></li>
+          <li><a href="#galeria" (click)="menuAbierto.set(false)" [class.nav__enlace--activo]="activeSection() === 'galeria'" [attr.aria-current]="activeSection() === 'galeria' ? 'page' : null">Galería</a></li>
+          <li><a href="#inscripciones" (click)="menuAbierto.set(false)" [class.nav__enlace--activo]="activeSection() === 'inscripciones'" [attr.aria-current]="activeSection() === 'inscripciones' ? 'page' : null">Inscripciones</a></li>
         </ul>
       </nav>
     </details>
